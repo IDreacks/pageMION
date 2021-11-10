@@ -11,11 +11,11 @@ jobs:
       - name: Deploy Prod
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.SSH_SERVER_ALAJI }}
-          username: ${{ secrets.SSH_USER_ALAJI }}
-          password: ${{ secrets.SSH_PASSWORD_ALAJI }}
-          port: ${{ secrets.SSH_PORT_ALAJI }}
+          host: ${{ secrets.SSH_SERVER_MION }}
+          username: ${{ secrets.SSH_USER_MION }}
+          password: ${{ secrets.SSH_PASSWORD_MION }}
+          port: ${{ secrets.SSH_PORT_MION }}
           script: |
-            cd /var/www/html/page_html
+            cd /var/www/html/pageMION
             git fetch 
             git pull origin main
